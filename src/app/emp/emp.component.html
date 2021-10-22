@@ -1,0 +1,63 @@
+<div class="card">
+    <form [formGroup]="empForm">
+      <div class="mt-5 box">
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="form-group mt-4" style="margin-top: -10px;">
+              <label>Employee Id</label>
+            </div>
+            <div class="form-row" style="margin-top: -10px;">
+              <div class="col">
+                <input type="text" formControlName="EmpId" class="form-control" placeholder="Enter EmpId">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group mt-4">
+              <label>FirstName</label>
+            </div>
+            <div class="form-row" style="margin-top: -10px;">
+              <div class="col">
+                <input type="text" formControlName="Firstname" class="form-control" placeholder="Enter Firstname">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group mt-4">
+              <label>LastName</label>
+            </div>
+            <div class="form-row" style="margin-top: -10px;">
+              <div class="col">
+                <input type="text" formControlName="Lastname" class="form-control" placeholder="Enter Lastname">
+              </div>
+            </div>
+          </div>
+          <div class="form-row mt-4">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-primary" (click)="addEmp()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="col-md-8 mt-4 mb-4 box">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>EmpId</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor ="let item of listData">
+                    <td><span>{{item.EmpId}}</span></td>
+                    <td><span>{{item.Firstname}}</span></td>
+                    <td><span>{{item.Lastname}}</span></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
